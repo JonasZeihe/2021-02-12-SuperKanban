@@ -15,6 +15,13 @@ function GetTodos() {
     return todos;
 }
 
+
+export function CreateTodos(description, status) {
+
+        axios.post("/api/todo", description, status)
+
+}
+
 export default GetTodos;
 
 

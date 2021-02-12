@@ -3,6 +3,8 @@ import './App.css';
 import ToDoApi from "./services/ToDoApi";
 import GetTodos from "./services/ToDoApi";
 import ToDoCard from "./components/ToDoCard";
+import AddToDoForm from "./components/ToDoForm";
+import {CreateTodos} from "./services/ToDoApi";
 
 function App() {
 
@@ -11,6 +13,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
+                <AddToDoForm onAdd={CreateTodos}></AddToDoForm>
             </header>
             <ul>
                 {toDoData.map(element => <ToDoCard
