@@ -9,7 +9,7 @@ function GetTodos() {
     }, [])
 
     function loadTodos() {
-        axios.get("http://localhost:8080/api/todo")
+        axios.get("/api/todo")
             .then(response => setTodos(response.data))
     }
     return todos;
